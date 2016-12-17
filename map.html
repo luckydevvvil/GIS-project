@@ -6,7 +6,7 @@
       #map { height: 100%; }
             #info {
                 position: absolute;
-                height: 250px;
+                height: 665px;
                 width: 400px;
                 bottom: 0;
                 left: 0;
@@ -25,6 +25,31 @@ function initMap() {
     center: {lat: 54.736, lng: 55.972},
     zoom: 12
   });
+  var infoWindow = new google.maps.InfoWindow({map: map});
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: parseInt(position.coords.latitide),
+        lng: parseInt(position.coords.longitude)
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found');
+      map.setCenter(pos);
+    }, function () {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+    } else {
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+      'Error: The Geolocation service failed.' :
+      'Error: Your browser doesn\'t support geolocation.');
+    }
 
   map.addListener('click', function (e) {
         printInfo(map, e.latLng);
@@ -34,7 +59,9 @@ function initMap() {
     function printInfo(map, latLng) {
         var info = document.getElementById('info');
         var placesService = new google.maps.places.PlacesService(map);
-        placesService.nearbySearch( { 'location': latLng, 'radius': 700, 'type': 'point_of_interest' }, function(results, status, pagination) {
+        placesService.nearbySearch( { 'location': latLng, 'radius': 700, 'types': ['amusement_park',
+        'aquarium', 'art_gallery', 'chuch', 'city_hall', 'hindu_temple', 'zoo', 'synagogue', 'stadium',
+        'park', 'place_of_worship', 'museum', 'mosque', 'library']}, function(results, status, pagination) {
             if (status != google.maps.places.PlacesServiceStatus.OK) {
                 info.innerHTML = "There was an error with searching";
                 return;
@@ -60,7 +87,11 @@ function initMap() {
              }
          });
     }
-}
+  }
+
+
+
+
 
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKT7HUdMMSUTxouv8-Fky73UrV7SvaTo8&libraries=places&callback=initMap"></script>
