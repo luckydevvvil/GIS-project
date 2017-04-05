@@ -1,100 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 100%; }
-            #info {
-                position: absolute;
-                height: 665px;
-                width: 400px;
-                bottom: 0;
-                left: 0;
-                background-color: white;
-                word-wrap: normal;
-                overflow: scroll; }
+        html, body { height: 100%; margin: 0; padding: 0; }
+      a {cursor: pointer; color: #1a0dab;}
+      
+        #map {
+            height: 100%; }
+        #info {
+            padding: 10px;
+            position: absolute;
+            height: 100%;
+            width: 400px;
+            top: 0;
+            left: 0;
+            background-color: rgba(200,200,200,0.7);
+            word-wrap: normal;
+            overflow: scroll; }
     </style>
-  </head>
-  <body>
-    <div id="map"></div>
-        <div id="info"></div>
-    <script type="text/javascript">
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 54.736, lng: 55.972},
-    zoom: 12
-  });
-  var infoWindow = new google.maps.InfoWindow({map: map});
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: parseInt(position.coords.latitide),
-        lng: parseInt(position.coords.longitude)
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found');
-      map.setCenter(pos);
-    }, function () {
-      handleLocationError(true, infoWindow, map.getCenter());
+    <script src="https://vk.com/js/api/openapi.js?143" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+    VK.init({
+        apiId: 5968477
     });
+</script>
+ 
+<div id="map"></div>
+<div id="info">
+    <div id="vk_auth" style="position: relative; top: 0; left:0;"></div>
+ 
+    <script type="text/javascript">
+        VK.Widgets.Auth('vk_auth', {width: "300px", authUrl: '/vklogin.php?'});
+    </script>
+    <div id="places"></div>
+</div>
+
+<script type="text/javascript">
+var map;
+ 
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 54.736, lng: 55.972},
+        zoom: 12
+    });
+ 
+    var infoWindow = new google.maps.InfoWindow({map: map});
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: parseInt(position.coords.latitide),
+                lng: parseInt(position.coords.longitude)
+            };
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found');
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
     } else {
-      handleLocationError(false, infoWindow, map.getCenter());
+        handleLocationError(false, infoWindow, map.getCenter());
     }
-
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-      'Error: The Geolocation service failed.' :
-      'Error: Your browser doesn\'t support geolocation.');
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
     }
-
-  map.addListener('click', function (e) {
+    map.addListener('click', function (e) {
         printInfo(map, e.latLng);
         moveMapToCoords(map, e.latLng);
-  });
-
-    function printInfo(map, latLng) {
-        var info = document.getElementById('info');
-        var placesService = new google.maps.places.PlacesService(map);
-        placesService.nearbySearch( { 'location': latLng, 'radius': 700, 'types': ['amusement_park',
+    });
+}
+ 
+function printInfo(map, latLng) {
+    var places = document.getElementById('places');
+    var placesService = new google.maps.places.PlacesService(map);
+    placesService.nearbySearch( { 'location': latLng, 'radius': 700, 'types': ['amusement_park',
         'aquarium', 'art_gallery', 'chuch', 'city_hall', 'hindu_temple', 'zoo', 'synagogue', 'stadium',
         'park', 'place_of_worship', 'museum', 'mosque', 'library']}, function(results, status, pagination) {
-            if (status != google.maps.places.PlacesServiceStatus.OK) {
-                info.innerHTML = "There was an error with searching";
-                return;
-            }
-              info.innerHTML = "coordinates: " + latLng + "<br />";
-            if (results.length == 0) {
-                info.innerHTML += "there are no points of interest in this place";
-                return;
-            }
-            info.innerHTML += "points of interest:" + "<br />";
-            for (var i = 0; i != results.length; ++i) {
-                info.innerHTML += results[i].name + "<br />";
-            }
-        });
-    }
+        if (status != google.maps.places.PlacesServiceStatus.OK) {
+            places.innerHTML = "There was an error with searching";
+            return;
+        }
+        places.innerHTML = "coordinates: " + latLng + "<br />";
+        if (results.length == 0) {
+            places.innerHTML += "there are no points of interest in this place";
+            return;
+        }
+        places.innerHTML += "points of interest:" + "<br />";
+        for (var i = 0; i != results.length; ++i) {
+places.innerHTML += "<a onclick='moveMainMapToCoords(new google.maps.LatLng"+results[i].geometry.location+")'>" + results[i].name + "</a><br>";        }
+    });
+}
+ 
+function moveMainMapToCoords(latLng) {
+  moveMapToCoords(map, latLng)
+}
+ 
+function moveMapToCoords(map, latLng) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'location': latLng }, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            map.fitBounds(results[0].geometry.viewport);
+        }
+    });
+}
+</script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKT7HUdMMSUTxouv8-Fky73UrV7SvaTo8&libraries=places&callback=initMap"></script>
 
-    function moveMapToCoords(map, latLng) {
-        var geocoder = new google.maps.Geocoder();
-         geocoder.geocode( { 'location': latLng }, function(results, status) {
-             if (status == google.maps.GeocoderStatus.OK) {
-                 map.setCenter(results[0].geometry.location);
-                 map.fitBounds(results[0].geometry.viewport);
-             }
-         });
-    }
-  }
-
-
-
-
-
-      
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKT7HUdMMSUTxouv8-Fky73UrV7SvaTo8&libraries=places&callback=initMap"></script>
-  </body>
+</body>
 </html>
