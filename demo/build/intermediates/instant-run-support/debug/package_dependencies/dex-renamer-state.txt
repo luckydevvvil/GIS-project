@@ -1,0 +1,22 @@
+#Fri Jun 02 03:49:34 MSK 2017
+renamed.6=classes3.dex
+renamed.5=classes4.dex
+renamed.4=classes5.dex
+renamed.3=classes6.dex
+renamed.2=classes2.dex
+renamed.1=classes7.dex
+renamed.0=classes.dex
+base.6=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_a25bcde36ae8510d3b0d46bf04e65333c5a0131f
+base.5=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c40815ada4e0580098913ba86abc2634356392ee
+base.4=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c65fd40420eb999c63a0f8b3b3da53d295aa84fa
+base.3=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-24.0.0_945c59f14a220d1c496a1a7a240e05b55a627463
+base.2=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_5d1a890f4a42561e3a7148273208aab86bc58e32
+base.1=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-24.0.0_860972f6926441e65c3ecd71970abf9b6113c01b
+base.0=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_57989d28288ff71b27f5d6485876c83e60a3e7bf
+file.6=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_a25bcde36ae8510d3b0d46bf04e65333c5a0131f\\classes.dex
+file.5=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c40815ada4e0580098913ba86abc2634356392ee\\classes.dex
+file.4=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_c65fd40420eb999c63a0f8b3b3da53d295aa84fa\\classes.dex
+file.3=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-24.0.0_945c59f14a220d1c496a1a7a240e05b55a627463\\classes.dex
+file.2=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_5d1a890f4a42561e3a7148273208aab86bc58e32\\classes.dex
+file.1=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-24.0.0_860972f6926441e65c3ecd71970abf9b6113c01b\\classes.dex
+file.0=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_57989d28288ff71b27f5d6485876c83e60a3e7bf\\classes.dex

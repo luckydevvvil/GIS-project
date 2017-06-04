@@ -1,0 +1,7 @@
+#Fri Jun 02 03:49:37 MSK 2017
+base.0=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f920b7d807272ca1d49ec2dca416d74be788772d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_61291495bb774141547a00f2600410a5e7fb1c74\\classes.dex
+base.1=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_61291495bb774141547a00f2600410a5e7fb1c74
+file.0=C\:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\demo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_f920b7d807272ca1d49ec2dca416d74be788772d\\classes.dex

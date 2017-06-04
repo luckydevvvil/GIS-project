@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\library\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\Данил\\.android\\build-cache\\a91b1d56d6884d26b5dacad6fbb4c62d970cf72e\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\library\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Данил\\.android\\build-cache\\a91b1d56d6884d26b5dacad6fbb4c62d970cf72e\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\library\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\Данил\\.android\\build-cache\\a91b1d56d6884d26b5dacad6fbb4c62d970cf72e\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Public\\AndroidStudioProjects\\GoogleMapsProject\\library\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\Данил\\.android\\build-cache\\a91b1d56d6884d26b5dacad6fbb4c62d970cf72e\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    }
+]
