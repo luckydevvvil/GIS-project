@@ -38,7 +38,7 @@ Google Maps Android API, Google Maps Distance Matrix API, Google Maps Android AP
 
 **Как запустить?**
 
-*Через среду разработки Android Studio:
+* Через среду разработки Android Studio:
 
 1.Установить [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (Java Development Kit).
 
@@ -46,10 +46,10 @@ Google Maps Android API, Google Maps Distance Matrix API, Google Maps Android AP
 
 **Возможное продолжение проекта**
 
-*Реализация клиент-серверной технологии*
+* Реализация клиент-серверной технологии*
 
 1.Обновление базы данных не требует переустановки приложения
 
 2.Возможность реализации скриптов для обработки слушателей
 
-*Публикация в Play Market*
+* Публикация в Play Market*
