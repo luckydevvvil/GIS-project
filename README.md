@@ -21,11 +21,13 @@ _Gis application_ предоставляет пользователю карту
 
 База данных включает в себя порядка 25.000 координат камер Москвы и подмосковья, что сильно загромождает карту и делает невозможным работой с приложением. В связи с этим реализован [алгоритм кластеризации данных](https://habrahabr.ru/post/145832/).
 
-![Состояние 1](http://upload.akusherstvo.ru/image1309241.png)
+<div align="center">
 
-![Состояние 2](http://upload.akusherstvo.ru/image1309247.png)
- 
-![Состояние 3](http://upload.akusherstvo.ru/image1309250.png)
+<a href="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny13.png" target="_blank"><img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny13.png" alt="List"></img></a>
+<a href="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/Zoom7.png" target="_blank"><img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny7.png" alt="List"></img></a>
+<a href="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/Zoom5.png" target="_blank"><img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny5.png" alt="List"></img></a>
+<p><b>(click to zoom)</b></p>
+</div>
 
 **Используемые технологии**
 
