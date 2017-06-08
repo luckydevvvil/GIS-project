@@ -22,8 +22,26 @@ _Gis application_ предоставляет пользователю карту
 База данных включает в себя порядка 25.000 координат камер Москвы и подмосковья, что сильно загромождает карту и делает невозможным работой с приложением. В связи с этим реализован [алгоритм кластеризации данных](https://habrahabr.ru/post/145832/).
 
 <div align="center">
+<style type="text/css">
+.vkl3 > br,
+.vkl3 > a:nth-of-type(2),
+.vkl3 > br:target ~ a:nth-of-type(1) {display:none;}
 
-<a href="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/Zoom13.png" target="_blank"><img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny13.png" alt="Zoom13"></img></a>
+.vkl3 > br {position:fixed;}
+
+.vkl3 > br:target ~ a:nth-of-type(2) {display: block;}
+</style>
+
+<figure class="vkl3">
+  <br id="vkl3"/>
+  <a href="#vkl3">
+    <img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny13.png"/>
+  </a>
+  <a href="#close">
+    <img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/Zoom13.png"/>
+  </a>
+</figure>
+
 <a href="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/Zoom7.png" target="_blank"><img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny7.png" alt="Zoom13"></img></a>
 <a href="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/Zoom5.png" target="_blank"><img src="https://github.com/luckydevvvil/GIS-project/blob/master/Pictures/ZoomTiny5.png" alt="Zoom13"></img></a>
 <p><b>(click to zoom)</b></p>
