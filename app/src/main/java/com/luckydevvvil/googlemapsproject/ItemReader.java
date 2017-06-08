@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MyItemReader {
+public class ItemReader {
 
     /*
      * This matches only once in whole input,
@@ -18,8 +18,8 @@ public class MyItemReader {
      */
     private static final String REGEX_INPUT_BOUNDARY_BEGINNING = "\\A";
 
-    public List<MyItem> read(InputStream inputStream) throws JSONException {
-        List<MyItem> items = new ArrayList<MyItem>();
+    public List<Item> read(InputStream inputStream) throws JSONException {
+        List<Item> items = new ArrayList<Item>();
         String json = new Scanner(inputStream).useDelimiter(REGEX_INPUT_BOUNDARY_BEGINNING).next();
         JSONArray array = new JSONArray(json);
 
@@ -38,7 +38,7 @@ public class MyItemReader {
             if (!object.isNull("snippet")) {
                 snippet = object.getString("snippet");
             }*/
-            items.add(new MyItem(lat, lng));
+            items.add(new Item(lat, lng));
         }
         return items;
     }

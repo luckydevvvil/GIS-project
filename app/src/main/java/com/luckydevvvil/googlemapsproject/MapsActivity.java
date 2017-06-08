@@ -31,7 +31,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
-    private ClusterManager<MyItem> mClusterManager;
+    private ClusterManager<Item> mClusterManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void setUpClusterer() {
         // Initialize the manager with the context and the map.
         // (Activity extends context, so we can pass 'this' in the constructor.)
-        mClusterManager = new ClusterManager<MyItem>(this, mMap);
+        mClusterManager = new ClusterManager<Item>(this, mMap);
 
         // Point the map's listeners at the listeners implemented by the cluster
         // manager.
@@ -103,13 +103,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void readItems() throws JSONException {
         InputStream inputStream = getResources().openRawResource(R.raw.radar_search);
-        List<MyItem> items = new MyItemReader().read(inputStream);
+        List<Item> items = new ItemReader().read(inputStream);
         mClusterManager.addItems(items);
-        /*for (MyItem item : items) {
+        /*for (Item item : items) {
             LatLng position = item.getPosition();
             double lat = position.latitude;
             double lng = position.longitude;
-            MyItem offsetItem = new MyItem(lat, lng);
+            Item offsetItem = new Item(lat, lng);
             mClusterManager.addItem(offsetItem);
         }*/
     }
